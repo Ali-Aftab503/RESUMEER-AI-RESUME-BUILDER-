@@ -1,7 +1,4 @@
-/**
- * Enhanced AI Suggest Button Component
- * With tone selection and improved UX
- */
+
 
 'use client';
 

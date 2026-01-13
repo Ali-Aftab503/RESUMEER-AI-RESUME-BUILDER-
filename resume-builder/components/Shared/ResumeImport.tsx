@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useResumeStore } from '@/store/resumeStore';
-import { useToastHelpers } from '@/components/Shared/Toast';
+import { useToastHelpers } from '@/components/shared/Toast';
 import { Upload, FileText, Linkedin, X, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 

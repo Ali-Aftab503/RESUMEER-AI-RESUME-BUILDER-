@@ -7,13 +7,13 @@
 
 import { Button } from '@/components/ui/button';
 import { useResumeStore } from '@/store/resumeStore';
-import { useToastHelpers } from '@/components/Shared/Toast';
+import { useToastHelpers } from '@/components/shared/Toast';
 import { FileText, Trash2, Upload, Palette, Download, FileJson, Check, Save, List, Target } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useEffect, useState, useRef } from 'react';
-import { SectionReorder } from '@/components/Shared/SectionReorder';
-import { CoverLetterGenerator } from '@/components/Shared/CoverLetterGenerator';
-import { JobMatcher } from '@/components/Shared/JobMatcher';
+import { SectionReorder } from '@/components/shared/SectionReorder';
+import { CoverLetterGenerator } from '@/components/shared/CoverLetterGenerator';
+import { JobMatcher } from '@/components/shared/JobMatcher';
 import { AnimatePresence } from 'framer-motion';
 
 export function Header() {
