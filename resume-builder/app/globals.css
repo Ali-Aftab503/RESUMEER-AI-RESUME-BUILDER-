@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  /* Primary Pink - Vibrant pink matching the screenshots */
+  --primary: 330 81% 60%;
+  /* #EC4899 */
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary - Bright Green for accents and success states */
+  --secondary: 142 76% 65%;
+  /* #4ADE80 - Bright green */
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 0 0% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  /* Accent - Orange for gradient effect */
+  --accent: 24 95% 53%;
+  /* #FB923C - Orange */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 330 81% 60%;
+
+  --radius: 0.75rem;
+
+  /* Custom gradient colors for pink-to-orange effect */
+  --gradient-start: 330 81% 60%;
+  /* Pink #EC4899 */
+  --gradient-end: 24 95% 53%;
+  /* Orange #FB923C */
+
+  /* Green accent for progress bars and highlights */
+  --green-accent: 142 76% 65%;
+  /* #4ADE80 */
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  /* Primary Pink - Same vibrant pink */
+  --primary: 330 81% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary - Bright Green */
+  --secondary: 142 76% 65%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  /* Accent - Orange */
+  --accent: 24 95% 53%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 330 81% 60%;
+
+  /* Custom gradient colors - same as light mode */
+  --gradient-start: 330 81% 60%;
+  --gradient-end: 24 95% 53%;
+  --green-accent: 142 76% 65%;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+    outline-color: hsl(var(--ring) / 0.5);
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+
+  /* Pink to Orange Gradient - for cards and buttons */
+  .gradient-pink-orange {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+  }
+
+  /* Reverse gradient */
+  .gradient-orange-pink {
+    background: linear-gradient(135deg, hsl(var(--gradient-end)) 0%, hsl(var(--gradient-start)) 100%);
+  }
+
+  /* Green accent for progress bars */
+  .bg-green-accent {
+    background-color: hsl(var(--green-accent));
+  }
+
+  .text-green-accent {
+    color: hsl(var(--green-accent));
+  }
+
+  /* Border gradient effect */
+  .border-gradient {
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white),
+      linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  /* Gradient text effect */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
