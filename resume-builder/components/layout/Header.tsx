@@ -124,7 +124,7 @@ export function Header() {
                 <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="min-w-0">
-                <h1 className="text-base sm:text-xl font-bold text-foreground truncate">AI Resume Builder</h1>
+                <h1 className="text-base sm:text-xl font-bold text-foreground truncate">Resumeer</h1>
                 <div className="hidden sm:flex items-center gap-2 text-xs text-muted-foreground">
                   <p className="truncate">Create professional resumes with AI</p>
                   {showSaved && (
