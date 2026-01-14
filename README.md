@@ -2,6 +2,9 @@
 
 Resumeer is a modern, feature-rich resume builder built with Next.js 16 and AI capabilities. It empowers users to create professional, ATS-friendly resumes in minutes using artificial intelligence to generate compelling summaries, experience descriptions, and skills.
 
+## Live Demo
+
+Check out the live application here: [Live Demo Link](https://resumeer-ai-resume-builder.vercel.app/)
 ## 🚀 Key Features
 
 - **🤖 AI-Powered Content Generation**
